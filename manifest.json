@@ -4,10 +4,9 @@
     "name": "All - On/Off",
     "version": "1.0",
     "description": "Adds a button to /r/all which disables/enables subreddit filtering.",
-    "permissions": ["tabs", "https://*/*"],
+    "permissions": ["tabs", "https://*/*", "storage"],
     "content_scripts" : [{
         "matches" : ["https://www.reddit.com/*"],
         "js" : ["jquery.js", "injector.js"]
-    }],
-    "web_accessible_resources": ["checkbox.html"]
+    }]
 }
