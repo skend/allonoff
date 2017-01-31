@@ -14,4 +14,13 @@ $(document).ready(function() {
 	};
 	xhttp.open("GET", chrome.extension.getURL("/checkbox.html"), true);
 	xhttp.send();
+	afterCheckboxCreation();
 });
+
+function afterCheckboxCreation() {
+	var input = document.getElementsByClassName("sr-name")[0];
+	var button = document.getElementsByClassName("add")[0];
+
+	var subredditList = document.getElementsByClassName("subreddits")[0];
+	console.log(subredditList.childNodes[0].innerText);
+}
